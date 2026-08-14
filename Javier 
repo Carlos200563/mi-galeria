@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mi Galería</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #111;
+      color: white;
+    }
+
+    header {
+      min-height: 70vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 30px;
+      background:
+        linear-gradient(rgba(0,0,0,.35), rgba(0,0,0,.75)),
+        url("media/atardecer.png") center/cover;
+    }
+
+    header h1 {
+      font-size: clamp(3rem, 10vw, 7rem);
+      margin-bottom: 20px;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      margin-bottom: 30px;
+    }
+
+    .boton {
+      display: inline-block;
+      padding: 14px 25px;
+      background: white;
+      color: #111;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav {
+      position: absolute;
+      top: 0;
+      width: 100%;
+      padding: 20px;
+      text-align: center;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 12px;
+      font-weight: bold;
+    }
+
+    section {
+      max-width: 1100px;
+      margin: auto;
+      padding: 70px 20px;
+    }
+
+    h2 {
+      font-size: 2.5rem;
+      margin-bottom: 30px;
+    }
+
+    .galeria {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+    }
+
+    .tarjeta {
+      background: #222;
+      border-radius: 15px;
+      overflow: hidden;
+    }
+
+    .tarjeta img,
+    .tarjeta video {
+      width: 100%;
+      display: block;
+    }
+
+    .texto {
+      padding: 20px;
+    }
+
+    .redes {
+      text-align: center;
+      background: #1c1c1c;
+      max-width: none;
+    }
+
+    .botones-redes {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 15px;
+      margin-top: 30px;
+    }
+
+    .red {
+      padding: 14px 25px;
+      border-radius: 30px;
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .instagram {
+      background: #d62976;
+    }
+
+    .facebook {
+      background: #1877f2;
+    }
+
+    .whatsapp {
+      background: #25d366;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px;
+      color: #aaa;
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+
+    <nav>
+      <a href="#fotos">Fotos</a>
+      <a href="#videos">Videos</a>
+      <a href="#redes">Mis redes</a>
+    </nav>
+
+    <div>
+      <h1>Mi Galería</h1>
+      <p>Fotos, videos y momentos especiales</p>
+      <a href="#fotos" class="boton">Ver galería ↓</a>
+    </div>
+
+  </header>
+
+  <section id="fotos">
+
+    <h2>📸 Mis fotos</h2>
+
+    <div class="galeria">
+
+      <div class="tarjeta">
+        <img src="media/atardecer.png" alt="Atardecer">
+        <div class="texto">
+          <h3>Atardecer 🌅</h3>
+          <p>Un momento especial.</p>
+        </div>
+      </div>
+
+      <!--
+      Para agregar más fotos copia esto:
+
+      <div class="tarjeta">
+        <img src="media/foto2.jpg" alt="Mi foto">
+        <div class="texto">
+          <h3>Mi foto</h3>
+          <p>Descripción.</p>
+        </div>
+      </div>
+      -->
+
+    </div>
+
+  </section>
+
+
+  <section id="videos">
+
+    <h2>🎥 Mis videos</h2>
+
+    <div class="galeria">
+
+      <div class="tarjeta">
+
+        <video controls poster="media/atardecer.png">
+
+          <source src="media/video-1.mp4" type="video/mp4">
+
+          Tu navegador no puede reproducir este video.
+
+        </video>
+
+        <div class="texto">
+          <h3>Mi video</h3>
+          <p>Un recuerdo para compartir.</p>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <section id="redes" class="redes">
+
+    <h2>🌐 Sígueme en mis redes</h2>
+
+    <p>Encuéntrame también en:</p>
+
+    <div class="botones-redes">
+
+      <a
+        class="red instagram"
+        href="https://www.instagram.com/sjjnigg/"
+        target="_blank">
+        📷 Instagram
+      </a>
+
+      <a
+        class="red facebook"
+        href="https://www.facebook.com/share/1bPJFeyjET/"
+        target="_blank">
+        👍 Facebook
+      </a>
+
+      <a
+        class="red whatsapp"
+        href="https://chat.whatsapp.com/CEVHFF97xh2LAzw73Fk6XN"
+        target="_blank">
+        💬 WhatsApp
+      </a>
+
+    </div>
+
+  </section>
+
+
+  <footer>
+    © 2026 Mi Galería · Todos mis recuerdos
+  </footer>
+
+</body>
+</html>
